@@ -1,4 +1,6 @@
-import argparse, cv2, numpy as np, sys, os
+import argparse
+import cv2
+import numpy as np
 #from moviepy.editor import *
 import csv
 import os
@@ -31,24 +33,13 @@ def key_faces(bboxes):
 
 
 
-<<<<<<< HEAD
+
 path     = 'dfdc_train_part_0'         #영상있는 폴더
 path_out = 'dfdc_train_part_0_out'     #이미지 만들 폴더
-=======
-path     = '/jaehyub/emotion_recognition/dfdc_train_part_0'         #영상있는 폴더
-path_out = '/jaehyub/emotion_recognition/dfdc_train_part_0_out'     #이미지 만들 폴더
->>>>>>> 083951e1aa28d5491b3a7acb7589a7d73941b845
 
 
 
-import json
-<<<<<<< HEAD
-with open('dfdc_train_part_0/metadata.json' , 'r') as f:
-=======
-with open('/mnt/serverhdd1/jaehyub/emotion_recognition/CODE_challenge/dfdc_train_part_0/metadata.json' , 'r') as f:
->>>>>>> 083951e1aa28d5491b3a7acb7589a7d73941b845
-    json_data = json.load(f)
-    
+
 
 data_split = os.listdir(path)
 count = 0
@@ -60,8 +51,8 @@ for fname in data_split:
         count +=1
         start = time.time()
 
-        if os.path.exists(os.path.join(path_out,fname[:-4]+'_'+json_data[fname]['label'])) == False:
-            os.makedirs(os.path.join(path_out,fname[:-4]+'_'+json_data[fname]['label']))
+        if os.path.exists(os.path.join(path_out,fname[:-4])) == False:
+            os.makedirs(os.path.join(path_out,fname[:-4]))
 
         detector = TinyFaceDetection.getDetector()
 
@@ -93,7 +84,7 @@ for fname in data_split:
 
                     if img[y:y+h,x:x+w].shape[0]>0 and img[y:y+h,x:x+w].shape[1]>0:
                         k_face=img[y:y+h,x:x+w]
-                        cv2.imwrite(os.path.join(path_out,fname[:-4]+'_'+json_data[fname]['label'],'1_{:04d}.jpg'.format(dem)), k_face)
+                        cv2.imwrite(os.path.join(path_out,fname[:-4]+'_','1_{:04d}.jpg'.format(dem)), k_face)
 
             i+=1
             frame+=1
