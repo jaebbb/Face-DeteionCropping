@@ -14,5 +14,6 @@ This project is the code for detecting and cropping the faces. The full paper is
 ## Install
 
 ```bash
-$ git clone 
-```
+$ git clone https://github.com/jaebbb/Face-DeteionCrop.git
+```  
+
