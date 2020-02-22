@@ -11,4 +11,8 @@ This project is the code for detecting and cropping the faces. The full paper is
   year = {2017}
 }
 ```  
+## Install
 
+```bash
+$ git clone 
+```
