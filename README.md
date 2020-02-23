@@ -1,4 +1,4 @@
-# Face Detecion & Cropping algorithm  
+# Face Detecion & Cropping  
 ## Install  
 ```bash
 $ git clone https://github.com/jaebbb/Face-DeteionCrop.git
